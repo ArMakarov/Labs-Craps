@@ -1,0 +1,26 @@
+import random 
+a = random.randint(1,6)
+b = random.randint(1,6)
+c = a+b
+goal = 0
+if c in [7,11]:
+  print(f'First roll: {c}. You win!')
+elif c in [2,3,12]:
+  print(f'First roll: {c}. You lose!')
+else:
+  c_1 = 0
+  stop = 0
+  goal = c
+  print(f'First roll: {goal}. You need to roll again to win!')
+  while stop !=1:
+    a_1 = random.randint(1,6)
+    b_1 = random.randint(1,6)
+    c_1 = a_1 + b_1
+    if c_1 == goal:
+      stop = 1
+      print(f'New roll: {c_1}. You win!')
+    elif c_1 == 7:
+      stop =1 
+      print(f'New roll: {c_1}. You lose!')
+    else:
+      print(f'New roll: {c_1}. Roll again')
